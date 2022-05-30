@@ -1,4 +1,9 @@
+import java.io.IOException;
 import java.net.URL;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -75,7 +80,27 @@ public class UpdateController {
             personNameField.setText(element.getPersonName());
             heightField.setText(String.valueOf(element.getHeight()));
             weightField.setText(String.valueOf(element.getWeight()));
-            birthdayField.setText(String.valueOf(element.getBirthday().toLocalDate()));
+            //birthdayField.setText(String.valueOf(element.getBirthday().toLocalDate()));
         }
+
+        updateButton.setOnAction(event -> {
+            try {
+                Transfer.getTransfer().Start("update " + idField.getText(), new LabWork(nameField.getText(),
+                        new Coordinates(Float.parseFloat(xField.getText()), Integer.parseInt(yField.getText())),
+                        Integer.parseInt(minpointField.getText()), discriptionField.getText(), Difficulty.HOPELESS,
+                        new Person(personNameField.getText(), null,
+                                //ZonedDateTime.of(LocalDateTime.from(LocalDate.parse(birthdayField.getText())), ZoneId.systemDefault()),
+                                Integer.parseInt(heightField.getText()), Integer.parseInt(weightField.getText()))));
+            } catch (IOException | ClassNotFoundException e) {
+                e.printStackTrace();
+            }
+        });
+        deleteButton.setOnAction(event -> {
+            try {
+                Transfer.getTransfer().Start("remove_key " + keyField.getText(), null);
+            } catch (IOException | ClassNotFoundException e) {
+                e.printStackTrace();
+            }
+        });
     }
 }
