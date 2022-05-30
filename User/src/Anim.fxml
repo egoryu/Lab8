@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" style="-fx-background-color: #440086;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AnimController">
+    <children>
+        <Button fx:id="outButton" alignment="TOP_LEFT" layoutX="634.0" layoutY="14.0" mnemonicParsing="false" style="-fx-background-color: #ffd400;" text="Out" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0" />
+        <Label alignment="CENTER" layoutX="225.0" layoutY="-2.0" text="Base Manager" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="225.0" AnchorPane.rightAnchor="225.0" AnchorPane.topAnchor="-2.0">
+            <font>
+                <Font size="40.0" />
+            </font>
+        </Label>
+        <MenuBar fx:id="menuBar" layoutX="14.0" layoutY="14.0">
+            <menus>
+                <Menu mnemonicParsing="false" text="Language">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Russian" />
+                        <MenuItem mnemonicParsing="false" text="Macedonian" />
+                        <MenuItem mnemonicParsing="false" text="Greek" />
+                        <MenuItem mnemonicParsing="false" text="Spanish (Nicaragua)" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="About" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Command">
+                    <items>
+                        <MenuItem fx:id="ChangeMode" mnemonicParsing="false" text="Table/Visual" />
+                        <MenuItem mnemonicParsing="false" text="insert " />
+                        <MenuItem mnemonicParsing="false" text="info " />
+                        <MenuItem mnemonicParsing="false" text="update" />
+                        <MenuItem mnemonicParsing="false" text="remove_key " />
+                        <MenuItem mnemonicParsing="false" text="clear " />
+                        <MenuItem mnemonicParsing="false" text="execute_script " />
+                        <MenuItem mnemonicParsing="false" text="history " />
+                        <MenuItem mnemonicParsing="false" text="replace_if_greater " />
+                        <MenuItem mnemonicParsing="false" text="remove_lower_key " />
+                        <MenuItem mnemonicParsing="false" text="sum_of_minimal_point " />
+                        <MenuItem mnemonicParsing="false" text="max_by_name " />
+                        <MenuItem mnemonicParsing="false" text="count_by_minimal_point " />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+      <ScrollPane fx:id="scrollPane" layoutY="59.0" prefHeight="641.0" prefWidth="1200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="59.0">
+        <content>
+          <AnchorPane fx:id="animSpace" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="661.0" prefWidth="1300.0" />
+        </content>
+      </ScrollPane>
+    </children>
+</AnchorPane>

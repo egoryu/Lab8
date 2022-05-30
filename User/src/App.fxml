@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="700.0" minWidth="1200.0" prefHeight="700.0" prefWidth="1200.0" style="-fx-background-color: #440086;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AppController">
+    <children>
+        <Button fx:id="outButton" alignment="TOP_LEFT" layoutX="634.0" layoutY="14.0" mnemonicParsing="false" style="-fx-background-color: #ffd400;" text="Out" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0" />
+        <AnchorPane layoutY="60.0" prefHeight="341.0" style="-fx-background-color: #fafafa;" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="60.0">
+         <children>
+            <TableView fx:id="mainTable" editable="true" layoutX="7.0" layoutY="93.0" minHeight="519.0" minWidth="1187.0" prefHeight="542.0" prefWidth="1188.0" AnchorPane.bottomAnchor="6.0" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="6.0" AnchorPane.topAnchor="93.0">
+              <columns>
+                <TableColumn fx:id="Key" prefWidth="75.0" text="Key" />
+                <TableColumn prefWidth="75.0" text="LabWork">
+                     <columns>
+                        <TableColumn fx:id="id" prefWidth="75.0" text="id" />
+                        <TableColumn fx:id="Name" prefWidth="75.0" text="Name" />
+                        <TableColumn prefWidth="75.0" text="Coordinates">
+                           <columns>
+                              <TableColumn fx:id="X" prefWidth="13.0" text="X" />
+                              <TableColumn fx:id="Y" prefWidth="163.0" text="Y" />
+                           </columns>
+                        </TableColumn>
+                        <TableColumn fx:id="creationDate" prefWidth="93.0" text="creationDate" />
+                        <TableColumn fx:id="minimalPoint" prefWidth="92.0" text="minimalPoint" />
+                        <TableColumn fx:id="description" prefWidth="78.0" text="description" />
+                        <TableColumn fx:id="difficulty" prefWidth="68.0" text="difficulty" />
+                        <TableColumn prefWidth="269.0" text="Person ">
+                           <columns>
+                              <TableColumn fx:id="author_name" prefWidth="75.0" text="name" />
+                              <TableColumn fx:id="birthday" prefWidth="75.0" text="birthday" />
+                              <TableColumn fx:id="height" prefWidth="75.0" text="height" />
+                              <TableColumn fx:id="weight" prefWidth="75.0" text="weight" />
+                           </columns>
+                        </TableColumn>
+                     </columns>
+                  </TableColumn>
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+            <TextField fx:id="keyFilter" layoutX="14.0" layoutY="14.0" promptText="Key filter" />
+            <TextField fx:id="idFilter" layoutX="179.0" layoutY="14.0" promptText="id filter" />
+            <TextField fx:id="nameFilter" layoutX="344.0" layoutY="14.0" promptText="Name filter" />
+            <TextField fx:id="personNameFilter" layoutX="14.0" layoutY="53.0" promptText="Person name filter" />
+            <TextField fx:id="heightFilter" layoutX="179.0" layoutY="53.0" promptText="Height filter" />
+            <TextField layoutX="509.0" layoutY="14.0" promptText="X filter" fx:id="xFilter" />
+            <TextField fx:id="yFilter" layoutX="677.0" layoutY="14.0" promptText="Y filter" />
+            <TextField fx:id="minimalPointFilter" layoutX="850.0" layoutY="14.0" promptText="Minimalpoint filter" />
+            <TextField fx:id="descriptionFilter" layoutX="1027.0" layoutY="14.0" promptText="Description filter" />
+            <TextField fx:id="weightFilter" layoutX="344.0" layoutY="53.0" promptText="Weight filter" />
+            <ChoiceBox fx:id="difficultyFilter" layoutX="509.0" layoutY="53.0" prefWidth="150.0" />
+            <ChoiceBox fx:id="creationDateFilter" layoutX="677.0" layoutY="53.0" prefWidth="150.0" />
+            <ChoiceBox fx:id="birthdayFilter" layoutX="850.0" layoutY="53.0" prefWidth="150.0" />
+            <Button fx:id="filterButton" layoutX="1027.0" layoutY="53.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="149.0" style="-fx-background-color: #ffd400;" text="Filter" />
+         </children>
+        </AnchorPane>
+        <Label alignment="CENTER" layoutX="225.0" layoutY="-2.0" text="Base Manager" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="225.0" AnchorPane.rightAnchor="225.0" AnchorPane.topAnchor="-2.0">
+            <font>
+                <Font size="40.0" />
+            </font>
+        </Label>
+      <MenuBar fx:id="menuBar" layoutX="14.0" layoutY="14.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Language">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Russian" />
+                  <MenuItem mnemonicParsing="false" text="Macedonian" />
+                  <MenuItem mnemonicParsing="false" text="Greek" />
+                  <MenuItem mnemonicParsing="false" text="Spanish (Nicaragua)" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Command">
+              <items>
+                  <MenuItem fx:id="ChangeMode" mnemonicParsing="false" text="Table/Visual" />
+                  <MenuItem fx:id="insetItem" mnemonicParsing="false" text="insert " />
+                <MenuItem mnemonicParsing="false" text="info " />
+                  <MenuItem mnemonicParsing="false" text="update" />
+                  <MenuItem mnemonicParsing="false" text="remove_key " />
+                  <MenuItem mnemonicParsing="false" text="clear " />
+                  <MenuItem mnemonicParsing="false" text="execute_script " />
+                  <MenuItem mnemonicParsing="false" text="history " />
+                  <MenuItem mnemonicParsing="false" text="replace_if_greater " />
+                  <MenuItem mnemonicParsing="false" text="remove_lower_key " />
+                  <MenuItem mnemonicParsing="false" text="sum_of_minimal_point " />
+                  <MenuItem mnemonicParsing="false" text="max_by_name " />
+                  <MenuItem mnemonicParsing="false" text="count_by_minimal_point " />
+              </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+    </children>
+</AnchorPane>

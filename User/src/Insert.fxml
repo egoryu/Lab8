@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="527.0" prefWidth="900.0" style="-fx-background-color: #440086;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="InsertController">
+    <children>
+        <Button fx:id="signUpButton" alignment="TOP_LEFT" layoutX="634.0" layoutY="14.0" mnemonicParsing="false" style="-fx-background-color: #ffd400;" text="Cancel" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0" />
+        <AnchorPane layoutY="60.0" prefHeight="478.0" prefWidth="900.0" style="-fx-background-color: #fafafa;" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="60.0">
+            <children>
+                <TextField fx:id="nameField" layoutX="315.0" layoutY="85.0" prefHeight="42.0" prefWidth="270.0" promptText="Name" scaleShape="false" style="-fx-border-color: #000000; -fx-border-radius: 5;" />
+                <Label alignment="CENTER" layoutX="208.0" prefHeight="51.0" prefWidth="284.0" text="Insertion" textAlignment="CENTER" AnchorPane.leftAnchor="208.0" AnchorPane.rightAnchor="208.0" AnchorPane.topAnchor="0.0">
+                    <font>
+                        <Font size="42.0" />
+                    </font>
+                </Label>
+                <Button fx:id="insertButton" alignment="CENTER" layoutX="300.0" layoutY="386.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="100.0" style="-fx-background-color: #ffd400;" text="Insert" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="300.0" AnchorPane.topAnchor="386.0">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Button>
+            <TextField layoutX="315.0" layoutY="159.0" prefHeight="42.0" prefWidth="270.0" promptText="X" scaleShape="false" style="-fx-border-color: #000000; -fx-border-radius: 5;" fx:id="xField" />
+            <TextField fx:id="yField" layoutX="616.0" layoutY="159.0" prefHeight="42.0" prefWidth="270.0" promptText="Y" scaleShape="false" style="-fx-border-color: #000000; -fx-border-radius: 5;" />
+            <TextField fx:id="difficultyField" layoutX="27.0" layoutY="229.0" prefHeight="42.0" prefWidth="270.0" promptText="Difficulty" scaleShape="false" style="-fx-border-color: #000000; -fx-border-radius: 5;" />
+            <TextField fx:id="minpointField" layoutX="27.0" layoutY="159.0" prefHeight="42.0" prefWidth="270.0" promptText="Minimal point" scaleShape="false" style="-fx-border-color: #000000; -fx-border-radius: 5;" />
+            <TextField fx:id="discriptionField" layoutX="616.0" layoutY="85.0" prefHeight="42.0" prefWidth="270.0" promptText="Description" scaleShape="false" style="-fx-border-color: #000000; -fx-border-radius: 5;" />
+            <TextField fx:id="personNameField" layoutX="315.0" layoutY="229.0" prefHeight="42.0" prefWidth="270.0" promptText="Person name" scaleShape="false" style="-fx-border-color: #000000; -fx-border-radius: 5;" />
+            <TextField fx:id="heightField" layoutX="27.0" layoutY="303.0" prefHeight="42.0" prefWidth="270.0" promptText="Height" scaleShape="false" style="-fx-border-color: #000000; -fx-border-radius: 5;" />
+            <TextField fx:id="weightField" layoutX="315.0" layoutY="303.0" prefHeight="42.0" prefWidth="270.0" promptText="Weight" scaleShape="false" style="-fx-border-color: #000000; -fx-border-radius: 5;" />
+            <TextField fx:id="birthdayField" layoutX="616.0" layoutY="229.0" prefHeight="42.0" prefWidth="270.0" promptText="Birthday (YYYY-MM-DD)" scaleShape="false" style="-fx-border-color: #000000; -fx-border-radius: 5;" />
+            <TextField fx:id="keyField" layoutX="27.0" layoutY="85.0" prefHeight="42.0" prefWidth="270.0" promptText="Key" scaleShape="false" style="-fx-border-color: #000000; -fx-border-radius: 5;" />
+            </children>
+        </AnchorPane>
+        <Label alignment="CENTER" layoutX="225.0" layoutY="-2.0" text="Base Manager" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="225.0" AnchorPane.rightAnchor="225.0" AnchorPane.topAnchor="-2.0">
+            <font>
+                <Font size="40.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>
